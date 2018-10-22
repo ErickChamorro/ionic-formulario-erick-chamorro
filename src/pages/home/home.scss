@@ -1,3 +1,25 @@
 page-home {
+    #bloque-eficiencia, #bloque-amor{
+        background-color: chartreuse;
+        border: 1px dashed green;
+        color: green;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 5px;
+    }
 
+    #bloque-eficiencia.show, #contenedor-formulario-uno.show, #contenedor-formulario-dos.show{
+        -webkit-animation: 0.5s fadein;
+        animation: 0.5s fadein;
+    }
+
+    @-webkit-keyframes fadein{
+        from{ opacity: 0; margin-top: 15px;}
+        to { opacity: 1; margin-top: 0;}
+    }
+
+    @keyframes fadein{
+        from{ opacity: 0; margin-top: 15px;}
+        to { opacity: 1; margin-top: 0;}
+    }
 }
