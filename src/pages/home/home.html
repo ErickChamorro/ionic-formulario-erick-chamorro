@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="dark">
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -7,8 +7,100 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h1 style="text-align:center;">formulario de evaluacion</h1>
+  <br>
+  <br>
+  <br>
+  <div class="contenedor-formulario-uno">
+    
+    <h3>Eficiencia del producto</h3>
+    
+    <!-- [(ng-model)]="eficiencia" -->
+    <ion-list radio-group [(ngModel)]="eficiencia">
+      <ion-item>
+        <ion-label>Excelente</ion-label>
+        <ion-radio name="eficiencia" value="excelente" color="secondary"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Bueno</ion-label>
+        <ion-radio name="eficiencia" value="bueno" color="primary"></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Regular</ion-label>
+        <ion-radio name="eficiencia" value="regular"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Malo</ion-label>
+        <ion-radio name="eficiencia" value="malo" color="danger"></ion-radio>
+      </ion-item>
+
+      <br>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <button ion-button block icon-left color="secondary">
+              <ion-icon name="camera"></ion-icon>
+              Capturar fotos
+            </button>
+          </ion-col>
+          <ion-col col-6>
+            <button ion-button block icon-left color="secondary" (click)="calificar()">
+              <ion-icon name="send"></ion-icon>
+              listo
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+
+  <hr>
+
+  <div class="contenedor_formulario_dos">
+    <h2>¿Ella me ama?</h2>
+    <ion-list radio-group>
+        <ion-item>
+          <ion-label>uff...como no te imaginas</ion-label>
+          <ion-radio value="positivo" color="secondary"></ion-radio>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Creo que si</ion-label>
+          <ion-radio value="creo" color="primary"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>No me ama</ion-label>
+          <ion-radio value="no"></ion-radio>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Me odia mas bien</ion-label>
+          <ion-radio value="despreciado" color="danger"></ion-radio>
+        </ion-item>
+  
+        <br>
+  
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <button ion-button block icon-left color="secondary">
+                <ion-icon name="camera"></ion-icon>
+                Capturar fotos
+              </button>
+            </ion-col>
+            <ion-col col-6>
+              <button ion-button block icon-left color="secondary">
+                <ion-icon name="send"></ion-icon>
+                listo
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+  </div>
 </ion-content>
