@@ -1,0 +1,8 @@
+{
+  "name": "ionicForm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "22ca1e23"
+}
