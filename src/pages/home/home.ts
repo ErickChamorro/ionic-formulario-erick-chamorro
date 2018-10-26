@@ -150,6 +150,26 @@ export class HomePage {
     radios.className = "show";
   }
 
+  enviar(){
+    const bloque_uno = document.getElementById("contenedor-formulario-uno");
+    const bloque_dos = document.getElementById("contenedor-formulario-dos");
+    if(!bloque_uno.attributes.getNamedItem("hidden") || !bloque_dos.attributes.getNamedItem("hidden")){
+      const alert = this.alertCtrl.create({
+        title: 'Aviso',
+        message: 'le falta calificar algo...',
+        buttons: ['okey','callese sapo']
+      });
+      alert.present();
+    }else{
+      const alert = this.alertCtrl.create({
+        title: 'Exito',
+        message: 'los datos han sido enviados',
+        buttons: ['Aceptar']
+      });
+      alert.present();
+    }
+  }
+
 
 
 }
